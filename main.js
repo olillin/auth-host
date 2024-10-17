@@ -3,8 +3,8 @@ const express = require("express")
 const app = express()
 
 app.use(express.static('public'))
-app.use((req, res, next) => {
-    var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+app.use((req, res) => {
+    var fullUrl = 'https://' + req.get('host') + req.originalUrl;
     res.redirect(`/all.html?${fullUrl}`)
 })
 
