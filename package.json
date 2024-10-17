@@ -1,0 +1,23 @@
+{
+  "name": "auth-host",
+  "version": "1.0.0",
+  "description": "Simple landing page for authorization",
+  "main": "main.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olillin/auth-host.git"
+  },
+  "author": "olillin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olillin/auth-host/issues"
+  },
+  "homepage": "https://github.com/olillin/auth-host#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

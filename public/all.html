@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization Response</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="flex-column">
+    <main class="flex-column copy">
+        <h2>Redirect URL</h2>
+        <input type="text" id="url" aria-disabled="true" disabled>
+        <button type="button" id="copy-url">Copy URL</button>
+    </main>
+    <script>
+        const url = window.location.search.substr(1)
+
+        const copyButton = document.getElementById("copy-url")
+        const urlField = document.getElementById("url")
+
+        urlField.value = url
+        const charWidth = parseFloat(getComputedStyle(urlField).fontSize) / 1.5
+        console.log(charWidth)
+        urlField.style.width = url.length * charWidth + 'px'
+
+        copyButton.addEventListener("click", () => {
+            urlField.select()
+            urlField.setSelectionRange(0, 99999) // For mobile devices
+
+            // Copy the text inside the field
+            navigator.clipboard.writeText(urlField.value)
+
+            copyButton.innerText = "Copied!"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700&display=swap');
+
+:root {
+    --font-family-sans: 'Nunito', sans-serif;
+    --font-family-mono: "Source Code Pro", monospace;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: var(--font-family-sans);
+    font-size: 1.25em;
+    font-weight: 300;
+    font-style: normal;
+
+    background-color: #fdfdfd;
+}
+
+.flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+main {
+    width: 100vw;
+}
+
+h2 {
+    font-size: 1rem;
+    color: black;
+}
+
+.copy input {
+    font-family: var(--font-family-mono);
+    font-weight: 400;
+    font-style: normal;
+
+
+    padding: 1em;
+    width: fit-content;
+    border-radius: 0.5em;
+    border: 1px solid #eee;
+
+    color: black;
+
+    margin-bottom: 2em;
+}
+
+.copy input:focus,
+.copy input:focus-visible {
+    outline: none !important;
+}
+
+button {
+    font-family: var(--font-family-sans);
+    font-weight: 700;
+    font-style: normal;
+
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+}
+
+.copy button {
+    min-width: 8em;
+}
